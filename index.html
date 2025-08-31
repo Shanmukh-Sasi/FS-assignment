@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Registration</h2>
+    <form id="registrationForm" action="/submit" method="POST" enctype="multipart/form-data">
+      <!-- Text Inputs -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="6">
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="16" max="60" required>
+
+      <!-- Radio Buttons -->
+      <label>Gender:</label>
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+      <input type="radio" name="gender" value="Other"> Other
+
+      <!-- Date -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <!-- Select Dropdown -->
+      <label for="course">Course:</label>
+      <select id="course" name="course" required>
+        <option value="">-- Select --</option>
+        <option value="CSE">CSE</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="MECH">MECH</option>
+      </select>
+
+      <!-- Checkbox -->
+      <label>Hobbies:</label>
+      <input type="checkbox" name="hobbies" value="Reading"> Reading
+      <input type="checkbox" name="hobbies" value="Sports"> Sports
+      <input type="checkbox" name="hobbies" value="Music"> Music
+
+      <!-- File Upload -->
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" name="photo" required>
+
+      <!-- Range -->
+      <label for="rating">Self Rating (1-10):</label>
+      <input type="range" id="rating" name="rating" min="1" max="10">
+
+      <!-- URL -->
+      <label for="linkedin">LinkedIn Profile:</label>
+      <input type="url" id="linkedin" name="linkedin">
+
+      <!-- Color -->
+      <label for="favcolor">Favorite Color:</label>
+      <input type="color" id="favcolor" name="favcolor">
+
+      <!-- Submit -->
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <!-- Link to JS Validation -->
+  <script src="validate.js"></script>
+</body>
+</html>
